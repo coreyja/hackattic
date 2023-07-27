@@ -105,7 +105,7 @@ async fn main() -> miette::Result<()> {
     let client = reqwest::Client::new();
     let resp: String = client
         .post(format!(
-            "https://hackattic.com/challenges/help_me_unpack/solve?access_token={}",
+            "https://hackattic.com/challenges/help_me_unpack/solve?access_token={}&playground=1",
             HACKATTIC_ACCESS_TOKEN
         ))
         .json(&answer)
